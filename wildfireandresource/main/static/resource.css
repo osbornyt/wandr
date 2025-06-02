@@ -1,0 +1,58 @@
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .form-column {
+    width: 48%; /* Adjust as needed */
+  }
+
+  .form-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-field label {
+    white-space: nowrap; /* Prevent label wrapping */
+  }
+
+  .form-field input {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-left: 10px;
+    height: 29px;
+  }
+  .form-group label {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+  font-size: 13px;
+}
+.required {
+  color: red;
+}
+.form-group input {
+    width: 400px;
+    min-width: 400px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 32px;
+    margin-left: 0px;
+}
+
+.clear-form {
+  cursor: pointer;
+  color: rgb(0, 123, 255);
+  font-size: 14px;
+  margin-right: 590px;
+  display: flex;
+  align-items: center; /* Vertically center the icon and text */
+  gap: 0.5rem; /* Add some horizontal space between icon and text */
+}

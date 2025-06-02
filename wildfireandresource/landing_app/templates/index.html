@@ -1,0 +1,413 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Wildfire & Resource</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha256-pdY4ejLKO67E0CM2tbPtq1DJ3VGDVVdqAR6j3ZwdiE4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/css/glightbox.min.css" integrity="sha256-bT9i1NF5afnHDpQ4z2cQBHJQGehoEj8uvClaAG+NXS0=" crossorigin="anonymous">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+{#        <img src="{% static  'assets/img/logo.png' %}" alt="">#}
+        <h1 class="sitename">W&R</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="/signup/">Sign&nbsp;Up</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
+            <img src="{% static  'assets/img/forms.png' %}" class="img-fluid animated" alt="">
+          </div>
+          <div class="col-lg-6  d-flex flex-column justify-content-center text-center text-md-start" data-aos="fade-in">
+            <h2>Effortlessly Fill and Manage Your PDF Forms</h2>
+            <p>Save time, ensure accuracy, and securely store your data for all your form filling needs.</p>
+            <div class="d-flex mt-4 justify-content-center justify-content-md-start">
+              <a href="/login/" class="download-btn"><span>Login</span></a>
+              <a href="#" class="download-btn download-btn-alt"><span>View Demo</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p class="fst-italic">Say goodbye to the hassle of filling out PDFs the hard way—our tool makes it easy.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container text-center">
+          <div class="offset-md-2 col-md-8" data-aos="fade-up" data-aos-delay="200">
+            <p>
+                We believe filling out PDFs should be as easy as filling out a web form. Just fill out a
+                simple online form, like you're completing any regular form on a website, and we’ll take care of the rest.
+                In seconds, your answers are neatly placed right into the official PDF document, ready for download.
+                No installations, no headaches—just a smooth, seamless way to complete and download your paperwork.
+                It's fast, easy, and works like magic.
+            </p>
+            <a href="#" class="read-more mt-5"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /About Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Features</h2>
+        <p class="fst-italic">Our tool is designed with you in mind—offering features that make form filling faster, smarter, and more secure.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-xl-5 d-flex align-items-center" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static 'assets/img/sheet.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-xl-7 d-flex" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="row align-self-center gy-5">
+
+              <div class="col-md-6 icon-box">
+                <i class="bi bi-bullseye"></i>
+                <div>
+                  <h4>Accuracy</h4>
+                  <p>Our smart form-filling process greatly reduces the risk of errors compared to doing it manually.</p>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6 icon-box">
+                <i class="bi bi-stopwatch"></i>
+                <div>
+                  <h4>Time Saving</h4>
+                  <p>With a guided, step-by-step experience, you can complete forms quickly and even reuse saved data.</p>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6 icon-box">
+                <i class="bi bi-database-check"></i>
+                <div>
+                  <h4>Data Retention</h4>
+                  <p>You can securely save your information to avoid typing the same details again for future forms.</p>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6 icon-box">
+                <i class="bi bi-check-circle"></i>
+                <div>
+                  <h4>Input Validation</h4>
+                  <p>Built-in checks help catch mistakes early, so you can be confident your information is correct.</p>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6 icon-box">
+                <i class="bi bi-shield-lock"></i>
+                <div>
+                  <h4>Security</h4>
+                  <p>Your data is encrypted and handled with care to ensure your privacy and protection.</p>
+                </div>
+              </div><!-- End Feature Item -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /Features Section -->
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section light-background">
+    <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>How It Works</h2>
+        <p class="fst-italic">Follow these 3 easy steps to create and download your form quickly.</p>
+      </div>
+    <!-- End Section Title -->
+
+      <div class="container text-center">
+       <div class="row gy-5">
+
+          <!-- Step 1 -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 shadow-sm border-0 position-relative" style="min-height: 400px;">
+              <div class="step-number-badge step-1-color">1</div>
+
+              <div class="card-body position-relative d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 350px;">
+                <span class="bg-step-icon"><i class="bi bi-person-circle"></i></span>
+
+                <h5 class="card-title position-relative fw-bold" style="z-index: 2; text-shadow: 1px 1px 5px rgba(255,255,255,0.15);">
+                  Sign Up / Login
+                </h5>
+                <p class="card-text position-relative fs-5" style="z-index: 2; max-width: 280px; text-shadow: 1px 1px 5px rgba(255,255,255,0.15);">
+                  Sign up or log in to access form templates designed for easy form filling.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 shadow-sm border-0 position-relative" style="min-height: 350px;">
+              <div class="step-number-badge step-2-color">2</div>
+
+              <div class="card-body position-relative d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 350px;">
+                <span class="bg-step-icon"><i class="bi bi-ui-checks"></i></span>
+
+                <h5 class="card-title position-relative fw-bold" style="z-index: 2; text-shadow: 1px 1px 5px rgba(255,255,255,0.15);">
+                  Select Template & Fill
+                </h5>
+                <p class="card-text position-relative fs-5" style="z-index: 2; max-width: 280px; text-shadow: 1px 1px 5px rgba(255,255,255,0.15);">
+                  Choose a template that fits your need, then fill in your details easily.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="card h-100 shadow-sm border-0 position-relative" style="min-height: 350px;">
+              <div class="step-number-badge step-3-color">3</div>
+
+              <div class="card-body position-relative d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 350px;">
+                <span class="bg-step-icon"><i class="bi bi-download"></i></span>
+
+                <h5 class="card-title position-relative fw-bold" style="z-index: 2; text-shadow: 1px 1px 5px rgba(255,255,255,0.15);">
+                  Preview & Download
+                </h5>
+                <p class="card-text position-relative fs-5" style="z-index: 2; max-width: 280px; text-shadow: 1px 1px 5px rgba(255,255,255,0.15);">
+                  See a live preview of your work and download it instantly.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </section>
+    <!-- /How It Works Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p class="fst-italic">We’d love to hear from you! Drop us a message and we’ll get back to you soon.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>A108 Adam Street</p>
+                  <p>New York, NY 535022</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>+1 5589 55488 55</p>
+                  <p>+1 6678 254445 41</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@example.com</p>
+                  <p>contact@example.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="500">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday</p>
+                  <p>9:00AM - 05:00PM</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="#" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit" class="download-btn">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Wildfire & Resource</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">About</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#features">Features</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contact</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy Policy</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Wildfire&Resource</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+{#        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>#}
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js" integrity="sha256-xnxZzfmAeTsCFsnenG6/aIQYg4girx5QsJQ546oon/M=" crossorigin="anonymous"></script>
+  <script src="{%  static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <!-- Main JS File -->
+  <script src="{%  static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
