@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Under Maintenance</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4; /* Light gray background */
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333; /* Darker heading color */
+        }
+
+        p {
+            color: #666; /* Slightly lighter text color */
+            margin-bottom: 20px;
+        }
+
+        .logout-button {
+            padding: 10px 20px;
+            background-color: #007bff; /* Blue button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline from link */
+        }
+
+        .logout-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Optional: Add a spinning animation */
+        .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #007bff;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .alert {
+            padding: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            background-color: #ffc107; /* Orange */
+            color: white;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.5s ease-in-out; /* Fade transition */
+            display: flex; /* Use flexbox for positioning */
+            align-items: center; /* Vertically align content */
+        }
+
+        .alert.show {
+            opacity: 1; /* Show the alert */
+        }
+
+        .closebtn {
+            margin-left: auto; /* Push close button to the right */
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s ease; /* Smooth opacity transition */
+            margin-right: 15px;
+        }
+
+        .closebtn:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert show" id="myAlert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{ message }}
+        </div>
+
+        {% endfor %}
+      {% endif %}
+    
+
+
+    <div class="container">
+        <h1>Website Under Maintenance</h1>
+        <div class="spinner"></div>  <p>We are currently performing scheduled maintenance. We'll be back online shortly.</p>
+        {% if user.is_authenticated  %}
+        <a href="{% url 'base:logout' %}" class="logout-button">Logout</a>  </div>
+        {% else %}
+            <a href="{% url 'base:login' %}" class="logout-button">Login</a>
+            <a href="{% url 'base:authView' %}" class="logout-button">Register</a>  </div>
+        {% endif %}
+
+        
+</body>
+</html>

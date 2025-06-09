@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Wildfire & Resource{% endblock %}</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link href="{% static 'dashboard.css' %}" rel="stylesheet">
+        {# Page-specific CSS #}
+        {% block custom_css %}{% endblock %}
+    </head>
+
+    <body>
+        <div id="main-layout" class="container-fluid main-layout">
+             {# sidebar #}
+            <div id="sidebar" class="sidebar">
+                {% include 'sections/sidebar.html' %}
+            </div>
+
+            {# top content #}
+            {% include 'sections/topbar.html' %}
+
+            {# main content #}
+            <div id="content-bottom" class="main">
+                {% block main_content %}{% endblock %}
+            </div>
+
+            {# content right #}
+            {% block content_right %}
+            <div id="content-right" class="content-right">
+                {% include 'sections/content_right.html' %}
+            </div>
+            {% endblock %}
+
+            <footer class="footer">
+                <small id="copyright">
+                    &copy; <span id="year"></span> W&amp;R. All Rights Reserved.
+                </small>
+                <small>
+                    <a href="#" style="text-decoration: none; color: #379777;">Privacy Policy</a>
+                    <span style="margin: 0 0.5rem; color: #6c757d;">|</span>
+                    <a href="#" style="text-decoration: none; color: #379777;">Terms &amp; Conditions</a>
+                </small>
+            </footer>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            const sidebar = document.getElementById('sidebar');
+            const contentMain = document.getElementById('main-layout');
+            const menuToggle = document.getElementById('menu-toggle');
+
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('collapsed');
+                contentMain.classList.toggle('collapsed');
+            });
+
+            // footer year
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+        {# Page-specific JS #}
+        {% block custom_js %}{% endblock %}
+    </body>
+</html>
