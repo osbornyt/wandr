@@ -1,0 +1,18 @@
+<div style="width: 180px">
+    <div class="card">
+        <a href="{% url 'main:mysettings' %}" class="card-link" >
+        <h6 class="card-title">Complete your Profile</h6>
+
+        <div class="card-body" id="progress-card" style="display: flex; justify-content: center; align-items: center;">
+        <div class="progress-circle" style="--progress-percentage: {{ profile_completion_percentage }}; ">
+            <svg viewBox="0 0 69 69">
+                <circle cx="50%" cy="50%" r="30"></circle>
+                    <circle class="progress-value" cx="50%" cy="50%" r="30"></circle>
+                </svg>
+                <div class="progress-text">{{ profile_completion_percentage }}%</div>
+            </div>
+        </div>
+        <p style="margin: 5px" class="card-text">Please complete your user profile information to ensure accurate documentation.</p>
+    </a>
+    </div>
+</div>

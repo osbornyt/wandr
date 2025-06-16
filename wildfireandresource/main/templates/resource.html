@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Resource{% endblock %}
+
+
+{% block custom_css %}
+{#<link href="{% static 'resource.css' %}" rel="stylesheet">#}
+<link rel="stylesheet" href="{% static 'css/form.css' %}" />
+{% endblock %}
+{% block main_content %}
+
+
+<div class="col">
+    
+    <section>
+        <h2>{{ resource.name }}</h2>
+
+        <div class="container">
+            {% if resource.data %}
+                {% for key, value in resource.data.items %}
+                <div class="field-group-three">
+                    <label for="{{ key }}">{{ key }}</label>
+                    <input type="text" id="{{ key }}" value="{{ value }}" readonly>
+                </div>
+
+                
+                {% endfor %}
+            {% else %}
+                No extracted data.
+            {% endif %}
+
+            
+        </div>
+    </section>
+
+    
+</div>
+{% endblock %}
+
+
+{% block custom_js %}
+{#<script src="{% static 'dash.js' %}"></script>#}
+
+{% endblock %}

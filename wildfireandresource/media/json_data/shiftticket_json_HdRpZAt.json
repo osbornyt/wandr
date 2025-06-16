@@ -1,0 +1,170 @@
+{
+    "Title": "Emergency Equipment Shift Ticket",
+    "Info": "This multi-page form is designed to capture comprehensive information related to equipment usage, incident reporting, etc.  It is divided into several sections, each focusing on specific details.  Please ensure all required fields are completed accurately.",
+    "Num_Pages": 6,
+    "data": [
+      {
+        "Type": "question",
+        "Answer": "text",
+        "No": 1,
+        "Page": 1,
+        "Entry": "Agreement Number",
+        "Description": "Enter the unique identifier assigned to the agreement. This is a required field."
+      },
+      {
+        "Type": "question",
+        "Answer": "text",
+        "No": 2,
+        "Page": 1,
+        "Entry": "Contractor Name",
+        "Description": "Enter the full legal name of the contracting company. This is a required field."
+      },
+      {
+        "Type": "question",
+        "Answer": "text",
+        "No": 3,
+        "Page": 1,
+        "Entry": "Incident or Project Name",
+        "Description": "Provide a brief, descriptive name for the incident or project. This is a required field."
+      },
+      {
+        "Type": "question",
+        "Answer": "text",
+        "No": 4,
+        "Page": 1,
+        "Entry": "Incident Number",
+        "Description": "Enter the unique identifier assigned to the incident."
+      },
+      {
+        "Type": "question",
+        "Answer": "text",
+        "No": 5,
+        "Page": 2,
+        "Entry": "Operator Name",
+        "Description": "Enter the name of the operator."
+      },
+      {
+        "Type": "question",
+        "Answer": "text",
+        "No": 6,
+        "Page": 2,
+        "Entry": "Equipment Make",
+        "Description": "Enter the make of the equipment."
+      },
+      {
+        "Type": "question",
+        "Answer": "text",
+        "No": 7,
+        "Page": 2,
+        "Entry": "Equipment Model",
+        "Description": "Enter the model of the equipment."
+      },
+      {
+        "Type": "select",
+        "Answer": "option",
+        "No": 8,
+        "Page": 2,
+        "Entry": "Operator Furnished By",
+        "Options": ["Contractor", "Government"],
+        "Options_Num": 2,
+        "Description": "Specify whether the operator was furnished by the Contractor or the Government. This is a required field."
+      },
+      {
+        "Type": "question",
+        "Answer": "text",
+        "No": 9,
+        "Page": 3,
+        "Entry": "Serial Number",
+        "Description": "Enter the serial number of the equipment."
+      },
+      {
+        "Type": "question",
+        "Answer": "text",
+        "No": 10,
+        "Page": 3,
+        "Entry": "License Number",
+        "Description": "Enter the license number of the equipment."
+      },
+      {
+        "Type": "select",
+        "Answer": "option",
+        "No": 11,
+        "Page": 3,
+        "Entry": "Operating Supplies Furnished By",
+        "Options": ["Contractor", "Government"],
+        "Options_Num": 2,
+        "Description": "Specify whether the operating supplies were furnished by the Contractor or the Government."
+      },
+      {
+        "Type": "select",
+        "Answer": "option",
+        "No": 12,
+        "Page": 4,
+        "Entry": "Select the unit of measurement",
+        "Options": ["Hours", "Days", "Miles"],
+        "Options_Num": 3,
+        "Description": "Select unit that best fit type of work"
+      },
+      {
+        "Type": "table",
+        "No": 13,
+        "Page": 4,
+        "Entry": "Fill the table",
+        "Cols_num": 5,
+        "Rows_num": 4,
+        "Cols": ["Date", "Start", "Stop", "Work", "Special"],
+        "Answer": ["date", "time", "time", "text", "text"],
+        "Description": "Fill the table"
+      },
+      {
+        "Type": "question",
+        "Answer": "text",
+        "No": 14,
+        "Page": 5,
+        "Entry": "Equipment Use",
+        "Description": "Briefly describe the use of the equipment."
+      },
+      {
+        "Type": "textarea",
+        "Answer": "text",
+        "No": 15,
+        "Entry": "Remarks",
+        "Page": 5,
+        "Description": "Enter any remarks regarding release, downtime and cause, problems, etc."
+      },
+      {
+        "Type": "select",
+        "Answer": "option",
+        "No": 16,
+        "Page": 5,
+        "Entry": "Equipment Status",
+        "Options": ["Inspected and under agreement", "Released by Government", "Withdrawn by Contractor"],
+        "Options_Num": 3,
+        "Description": "Select the current status of the equipment."
+      },
+      {
+        "Type": "question",
+        "Answer": "text",
+        "No": 17,
+        "Page": 6,
+        "Entry": "Invoice Posted By",
+        "Description": "Enter the name of the person who posted the invoice."
+      },
+      {
+        "Type": "question",
+        "Answer": "text",
+        "No": 18,
+        "Page": 6,
+        "Entry": "Recorder's Initials",
+        "Description": "Enter the initials of the recorder."
+      },
+      {
+        "Type": "question",
+        "Answer": "date",
+        "No": 19,
+        "Page": 6,
+        "Entry": "Date Signed",
+        "Description": "Enter the date the form was signed."
+      }
+    ]
+  }

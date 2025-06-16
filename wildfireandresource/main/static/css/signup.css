@@ -1,0 +1,253 @@
+/* Container */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1320px;
+    }
+  }
+  
+  .container h1 {
+    color: #004d00;
+    height: 10px;
+    margin-bottom: 3rem;
+  }
+  
+  .form-control {
+    display: block;
+    width: 70%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529; /* Dark gray text color */
+    background-color: #fff; /* White background */
+    background-clip: padding-box;
+    border: 1px solid #005a66; /* Light gray border */
+    appearance: none; /* Remove default form element styling */
+    border-radius: 0.25rem; /* Slightly rounded corners */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #80bdff; /* Slightly blue border on focus */
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Subtle blue box shadow on focus */
+  }
+  
+  .form-control::placeholder {
+    color: #6c757d; /* Gray placeholder text color */
+    opacity: 1; /* For Firefox */
+  }
+  
+  .form-control:disabled,
+  .form-control[readonly] {
+    background-color: #e9ecef; /* Light gray background for disabled/readonly */
+    opacity: 1;
+  }
+  
+  /* Styles for select elements */
+  select.form-control {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"); /* Add dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    padding-right: 2rem; /* Adjust padding to make space for the arrow */
+  }
+  
+  /* Styles for file input elements */
+  input[type="file"].form-control {
+      overflow: hidden; /* Hide the default file input button */
+      padding: 0.375rem 0.75rem;
+  }
+  
+  /* Form Text */
+  .form-text {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #6c757d; /* Gray text color */
+  }
+  
+  /* Text Muted */
+  .text-muted {
+    color: #6c757d !important; /* Gray text color, !important to override other styles*/
+  }
+  
+  /* Small */
+  small {
+    font-size: 0.875rem;
+  }
+
+  /* Button */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529; /* Dark gray text color */
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .btn:hover {
+    color: #212529;
+    text-decoration: none;
+  }
+  
+  .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Subtle blue box shadow on focus */
+  }
+  
+  .btn:disabled {
+    opacity: 0.65;
+    pointer-events: none;
+  }
+  
+  /* btn-secondary */
+  .btn-secondary {
+    color: #fff; /* White text color */
+    background-color: #6c757d; /* Gray background color */
+    border-color: #6c757d; /* Gray border color */
+  }
+  
+  .btn-secondary:hover {
+    color: #fff;
+    background-color: #5a6268; /* Darker gray background on hover */
+    border-color: #545b62; /* Darker gray border on hover */
+  }
+  
+  .btn-secondary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5); /* Slightly darker gray box shadow */
+  }
+  
+  .btn-secondary:disabled {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  /* Button Sizes (Optional - Add these if you need different sizes) */
+  .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem;
+  }
+  
+  .btn-lg {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+  }
+
+  /* col-md-6 */
+.col-md-6 {
+    position: relative;
+    width: 100%;
+    padding-right: auto;
+    padding-left: 20px;
+    background: white;
+    border-radius: 0.1rem;
+    box-shadow: 1px 1px 5px #888, -1px -1px 5px #888;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) { /* Medium breakpoint */
+    .col-md-6 {
+      -ms-flex: 0 0 50%; /* 50% width */
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* offset-md-3 */
+  .offset-md-3 {
+    margin-left: 0; /* Reset default margin */
+  }
+  
+  @media (min-width: 768px) { /* Medium breakpoint */
+    .offset-md-3 {
+      margin-left: 25%; /* 25% left margin (offset) */
+    }
+  }
+
+  button {
+    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+    margin-top: 1rem;
+    background-color: transparent; /* Button background color */
+    color: #005a66; /* Button text color */
+    border: 1px solid #005a66;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none; /* Remove default focus outline */
+    font-size: 15px;
+    font-weight: 550;
+  }
+
+  .button-cancel {
+    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+    margin-top: 1rem;
+    background-color: transparent; /* Button background color */
+    color: #990000; /* Button text color */
+    border: 1px solid #990000;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none; /* Remove default focus outline */
+    font-size: 15px;
+    font-weight: 550;
+  }
+  a {
+    text-decoration: none;
+  }

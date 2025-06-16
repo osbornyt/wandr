@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}WR Agreements{% endblock %}
+
+
+{% block custom_css %}
+{#<link href="{% static 'resource.css' %}" rel="stylesheet">#}
+<link rel="stylesheet" href="{% static 'css/form.css' %}" />
+{% endblock %}
+{% block main_content %}
+
+
+<div class="col">
+    
+    <section>
+        <h2>{{ contract.description }} - {{ contract.contract_no }}</h2>
+        <div class="container">
+            <div class="field-group">
+            <label for="id">ID</label>
+            <input type="text" id="id" value="12345" readonly>
+            </div>
+
+            <div class="field-group">
+            <label for="name">Agremment No</label>
+            <input type="text" id="name" value="{{ contract.contract_no }}" readonly>
+            </div>
+
+            <div class="field-group">
+            <label for="model">Description</label>
+            <input type="text" id="model" value="{{ contract.description }}" readonly>
+            </div>
+
+            <div class="field-group">
+            <label for="model-year">Solication No</label>
+            <input type="text" id="model-year" value="{{ contract.solicitation_no }}" readonly>
+            </div>
+
+            
+            <div class="field-group-three">
+            <label for="location">Amount</label>
+            <input type="text" id="location" value="{{ contract.amount }}" readonly>
+            </div>
+
+            <div class="field-group-three">
+            <label for="type">NAICS</label>
+            <input type="text" id="type" value="{{ contract.naics }}" readonly>
+            </div>
+
+            <div class="field-group-three">
+            <label class="label-dynamic" for="serial">File</label>
+            <a id="serial" href="http://localhost:8000/media/{{ contract.pdf_location }}" target="_blank" class="view-file">
+                <span>{{ contract.file_name }}</span>
+            </a>
+            </div>
+
+            <div class="field-group-three">
+            <label for="fuel">Solicitor Name</label>
+            <input type="text" id="fuel" value="{{ contract.solicitor_name }}" readonly>
+            </div>
+
+            <div class="field-group-three">
+            <label for="owner">Solicitor Tel</label>
+            <input type="text" id="owner" value="{{ contract.solicitor_phone }}" readonly>
+            </div>
+            <div class="field-group-three">
+            <label for="owner">Contracting Officer</label>
+            <input type="text" id="owner" value="{{ contract.contractring_officer }}" readonly>
+            </div>
+
+            <div class="field-group-two">
+            <label class="label-dynamic" for="service">Service</label>
+            <div id="service" class="view-file">
+                <span> {{ contract.service }} </span>
+                </div>
+            </div>
+
+            <div class="field-group-two">
+            <label class="label-dynamic" for="issuer">Issuer</label>
+            <div id="issuer" class="view-file">
+                <span>{{ contract.issuer }}</span>
+            </div>
+            </div>
+            <div class="field-group-three">
+            <label for="issue_date">Issue Date</label>
+            <input type="text" id="issue_date" value="{{ contract.issue_date }}" readonly>
+            </div>
+
+            <div class="field-group-three">
+            <label for="award">Award Date</label>
+            <input type="text" id="award" value="{{ contract.award_date }}" readonly>
+            </div>
+
+            <div class="field-group-three">
+            <label for="offer_due_date">Offer Due Date</label>
+            <input type="text" id="offer_due_date" value="{{ contract.offer_due_date }}" readonly>
+            </div>
+
+            <div class="field-group-three">
+            <label for="effective_date">Effective Date</label>
+            <input type="text" id="effective_date" value="{{ contract.effective_date }}" readonly>
+            </div>
+
+            <div class="field-group-three">
+            <label for="contractor_date">Contractor Signed Date</label>
+            <input type="text" id="contractor_date" value="{{ contract.contractor_signed_date }}" readonly>
+            </div>
+
+            <div class="field-group-three">
+            <label for="officer_date">Officer Signed Date</label>
+            <input type="text" id="officer_date" value="{{ contract.officer_signed_date }}" readonly>
+            </div>
+
+            <div class="field-group-two">
+            <label for="notes">Notes</label>
+            <textarea id="notes" rows="3" readonly>{{ contract.notes }}</textarea>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Vendor Information</h2>
+        <div class="container">
+            <div class="field-group-three">
+                <label for="contractor_name">Contractor Name</label>
+                <input type="text" id="contractor_name" value="{{ contract.contractor_name }}" readonly>
+            </div>
+
+            <div class="field-group-three">
+                <label for="contractor_tel">Contractor Tel</label>
+                <input type="text" id="contractor_tel" value="{{ contract.contractor_tel }}" readonly>
+            </div>
+            <div class="field-group-three">
+                <label for="Company">Company</label>
+                <input type="text" id="Company" value="{{ contract.vendor_company }}" readonly>
+            </div>
+            <div class="field-group-three">
+                <label for="UEI">UEI</label>
+                <input type="text" id="UEI" value="{{ contract.vendor_UEI }}" readonly>
+            </div>
+            
+            <div class="field-group-three">
+                <label for="dba">DBA</label>
+                <input type="text" id="dba" value="{{ contract.vendor_DBA }}" readonly>
+            </div>
+
+            <div class="field-group-three">
+                <label for="EFT">EFT</label>
+                <input type="text" id="EFT" value="{{ contract.vendor_EFT }}" readonly>
+            </div>
+            
+            <div class="field-group-two">
+                <label class="label-dynamic" for="address">Address</label>
+                <div id="address" class="view-file">
+                    <span> {{ contract.vendor_address }} </span>
+                </div>
+            </div>
+
+            <div class="field-group-two">
+            <label class="label-dynamic" for="mail">Mail</label>
+            <div id="mail" class="view-file">
+                <span>{{ contract.vendor_mail }}</span>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Resources</h2>
+        <div class="table-container">
+            <table>
+            <thead>
+                <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>CLIN</th>
+                <th>Serial</th>
+                <th>Make</th>
+                <th>Model</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in resources %}
+                    <tr onclick="window.location.href='/resource?id={{ r.id }}'">
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ r.name }}</td>
+                    <td>{{ r.status }}</td>
+                    <td>{{ r.clin }}</td>
+                    <td>{{ r.serial }}</td>
+                    <td>{{ r.make }}</td>
+                    <td>{{ r.model }}</td>
+                    
+                    </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="7">No resources found.</td>
+                </tr>
+                {% endfor %}
+                
+                
+                <!-- Add more rows as needed -->
+            </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+
+{% block custom_js %}
+{#<script src="{% static 'dash.js' %}"></script>#}
+
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}WR Dashboard{% endblock %}
+
+{% block custom_css %}
+{# some custom css #}
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}" />
+{% endblock %}
+
+
+{% block main_content %}
+    <div class="col">
+     <section class="welcome-section col">
+        <h2>Welcome to Your Mission Control</h2>
+        <p>
+            The WildFireandResource App is designed to streamline the management of resource orders and emergency documentation. Our system empowers you to efficiently handle critical wildfire incident forms, ensuring accuracy and rapid deployment.
+        </p>
+        <p>
+            Whether you're uploading existing resource orders or generating new forms from scratch, our intelligent system minimizes manual data entry and helps you focus on what matters most.
+        </p>
+    </section>
+
+    <section class="how-it-works-section">
+        <h2>How It Works</h2>
+        <p>Our application simplifies the process of managing critical incident forms through intelligent data extraction and generation.</p>
+
+        <h3 class="text-primary">1. Agreement Contract Processing</h3>
+        <ul>
+            <li>
+                <strong>Upload an Existing PDF:</strong> Upload your agreement contract PDF file. The system will prompt you to provide an associated short description. Once uploaded, The application intelligently mines crucial information, including:
+                <ul>
+                    <li>Contract Number</li>
+                    <li>Issuer Contact Information</li>
+                    <li>Amount</li>
+                    <li>Important Dates</li>
+                    <li>Vendor Information</li>
+                    <li>Associated Resources</li>
+                </ul>
+                This data is then securely stored and readily accessible for further operations.
+            </li>
+            
+        </ul>
+
+        <h3 class="text-primary">2. Resource Order (RO) Form Management</h3>
+        <p>You can manage Resource Order forms in two ways:</p>
+        <ul>
+            <li>
+                <strong>Upload an Existing PDF:</strong> Upload your Resource Order PDF file. The system will prompt you to select an associated agreement contract. Once uploaded, our intelligent parser will automatically mine the following critical data points directly from the PDF:
+                <ul>
+                    <li>Project Name</li>
+                    <li>Incident Number</li>
+                    <li>Resource Model and Make</li>
+                    <li>Request Number</li>
+                    <li>Resource Assigned</li>
+                </ul>
+                The form is then securely stored for future reference.
+            </li>
+            <li>
+                <strong>Manual Data Entry:</strong> Alternatively, if you don't have a PDF to upload, you can manually input the above-mentioned information directly into the system using provided input fields. This flexibility ensures you can generate necessary documentation quickly.
+            </li>
+        </ul>
+
+        <h3 class="text-primary">3. Generating Essential Forms</h3>
+        <p>The mined or manually entered data from the Resource Order Form is then used to populate two vital documents:</p>
+        <ul>
+            <li>
+                <strong>Emergency Shift Ticket:</strong> This form utilizes all the information retrieved from the Resource Order Form. Additionally, the system provides extra input fields where you can add more specific details required for the Emergency Shift Ticket.
+            </li>
+            <li>
+                <strong>Evaluation Form:</strong> The Evaluation form is designed for simplicity. It exclusively uses the information mined (or manually entered) from the Resource Order Form, requiring no additional user input for its generation.
+            </li>
+        </ul>
+        <p>This automated process ensures consistency and reduces errors across your incident documentation.</p>
+    </section>
+
+    <section class="quick-actions-section">
+        <h2>Quick Actions</h2>
+        <p>Jump right into your tasks with these convenient shortcuts:</p>
+        <div class="action-buttons">
+            <a  href="{% url 'main:agreements' %}" class="action-button">
+                <i class="fas fa-upload"></i>
+                <span>Upload Agreement Contract</span>
+            </a>
+            <a  href="{% url 'main:resource_order' %}" class="action-button">
+                <i class="fas fa-upload"></i>
+                <span>Upload Resource Order</span>
+            </a>
+            <a  href="{% url 'main:fetch_shift_ticket' %}" class="action-button">
+                <i class="fas fa-ticket-alt"></i>
+                <span>Generate Shift Ticket Form</span>
+            </a>
+            <a  href="{% url 'main:exhibit_e' %}" class="action-button">
+                <i class="fas fa-file-alt"></i>
+                <span>Generate Evaluation Form</span>
+            </a>
+        </div>
+    </section>
+    </div>
+{% endblock %}
+
+
+{% block custom_js %}
+{#<script src="{% static 'dash.js' %}"></script>#}
+{% endblock %}

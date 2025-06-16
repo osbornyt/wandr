@@ -1,0 +1,177 @@
+
+     /* Login page css */
+     form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .login-wrap-container {
+        min-height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5rem;
+        margin-bottom: 5rem;
+      }
+      .login-content {
+        height: 70vh;
+        width: 100vh;
+        background: white;
+        border-radius: 0.1rem;
+        box-shadow: 1px 1px 5px #888, -1px -1px 5px #888;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        text-align: center;
+        padding-top: 2rem;
+  
+        
+      }
+      
+      @media only screen and (max-width: 600px) {
+        .login-content {
+          height: 65vh;
+          width: 90%;
+        }
+      }
+      .login-content h1 {
+        color: #004d00;
+        height: 10px;
+        margin-bottom: 2rem;
+      }
+  
+      .login-content p {
+        padding-bottom: 0;
+        font-weight: 550;
+        margin-bottom: 0.3rem;
+        color: #555;
+      }
+  
+      .wrap-login {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 0.5rem;
+        margin-left: 0;
+        margin-right: 0;
+      }
+  
+      .wrap-login-inside {
+        text-align: left;
+        width: 70%;
+      }
+  
+      #error {
+        background: #ff3333;
+        border: none;
+        border-radius: 1rem;
+        text-align: center;
+        color: white;
+        font-size: 16px;
+      }
+  
+      .x-icon {
+        color: black;
+      }
+  
+      .login-input {
+        width: 80%;
+        height: 2.5rem;
+        border: 1px solid #005a66;
+        border-radius: 4px;
+        outline: none; /* Remove default focus outline */
+        padding-left: 2rem;
+        padding-top: 0;
+         z-index: 50;
+      }
+      .input-container {
+        position: relative;
+        z-index: 50;
+      }
+  
+      .icon {
+        position: absolute;
+        top: 50%;
+        left: 8px;
+        transform: translateY(-50%);
+        color: #555; /* Icon color */
+         z-index: 50;
+      }
+      .eye {
+        position: absolute;
+        top: 50%;
+        right: 13%;
+        transform: translateY(-50%);
+        color: #555; /* Icon color */
+        cursor: pointer;
+         z-index: 50;
+      }
+  
+       button {
+        padding: 1rem;
+        padding-left: 1rem;
+        padding-right: 1.5rem;
+        margin-top: 1rem;
+        background-color: transparent; /* Button background color */
+        color: #005a66; /* Button text color */
+        border: 1px solid #005a66;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none; /* Remove default focus outline */
+        font-size: 15px;
+        font-weight: 550;
+      }
+  
+      .icon-sign {
+        margin-right: 5px; /* Adjust margin as needed */
+        color: #005a66;
+        font-weight: 500;
+      }
+  
+      .quiz {
+        font-weight: 400;
+      }
+      .clickable {
+        cursor: pointer;
+      }
+
+      .alert {
+        padding: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        background-color: #ffc107; /* Orange */
+        color: white;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.5s ease-in-out; /* Fade transition */
+        display: flex; /* Use flexbox for positioning */
+        align-items: center; /* Vertically align content */
+        width: 75%;
+    }
+
+    .alert.show {
+        opacity: 1; /* Show the alert */
+    }
+
+    .closebtn {
+        margin-left: 0px; /* Push close button to the right */
+        color: white;
+        font-weight: bold;
+        font-size: 22px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.3s ease; /* Smooth opacity transition */
+        margin-right: 15px;
+    }
+
+    .closebtn:hover {
+        opacity: 1;
+    }

@@ -1,0 +1,57 @@
+{% load static %}
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <div class="text-center sidebar-brand-wrapper d-flex align-items-center">
+    <a class="sidebar-brand brand-logo" href="#"><img src="{% static 'images/logo.svg' %}" alt="logo" /></a>
+    <a class="sidebar-brand brand-logo-mini pl-4 pt-3" href="#"><img src="{% static 'images/logo-mini.svg' %}" alt="logo" /></a>
+  </div>
+  <ul class="nav">
+    <li class="nav-item mt-5">
+      <a class="nav-link" href="{% url 'main:dashboard' %}">
+        <i class="mdi mdi-view-dashboard menu-icon"></i>
+        <span class="menu-title">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="{% url 'main:agreements' %}">
+      <i class="mdi mdi-handshake menu-icon"></i>
+      <span class="menu-title">Agreements</span>
+    </a>
+  </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'main:resource_order' %}">
+        <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+        <span class="menu-title">Resource Orders</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'main:fetch_shift_ticket' %}">
+        <i class="mdi mdi-ticket-confirmation menu-icon"></i>
+        <span class="menu-title">Shift Tickets</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'main:exhibit_e' %}">
+        <i class="mdi mdi-clipboard-check menu-icon"></i>
+        <span class="menu-title">Evaluations</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'main:mysettings' %}">
+        <i class="mdi mdi-account-circle menu-icon"></i>
+        <span class="menu-title">Profile</span>
+      </a>
+    </li>
+    <li class="nav-item sidebar-actions">
+      <div class="nav-link">
+        <div class="mt-4">
+          <ul class="mt-4 pl-0">
+            <a class="nav-link" href="{% url 'main:logout' %}">
+            <li>Sign Out</li>
+            </a>
+          </ul>
+        
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>

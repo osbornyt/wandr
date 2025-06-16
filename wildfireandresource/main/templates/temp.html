@@ -1,0 +1,28 @@
+<div id="content-main">
+                <div class="mycard">
+                    <!-- <a href="{% url 'main:pageholder' %}" class="card-link"> -->
+                    <div class="mycard-body">
+                    {% load static %}
+                    <img src="{% static 'images/shiftticket.png' %}" class="card-img-top" alt="Document Image">
+                    
+                      <h6 class="card-title">Emergency Equipment Shift Ticket</h6>
+                      <div class="button-group">
+                        <!-- <form method="POST" action="/fill_form/">
+                          {% csrf_token %}  
+                          <input type="hidden" name="form_id" value="1">
+                          <button type="submit" class="btn btn-primary">Fill Form</button>
+                        </form> -->
+                        <a href="{% url 'main:fetch_form' form_id=form.id %}">  
+                            <button class="btn btn-primary">Fill Form</button>  
+                        </a>
+                        <a href="{{ form.pdf_location.url }}" target="_blank" class="btn btn-secondary">Preview</a>
+                        <!-- <form method="POST" action="/your-form-processing-url/">
+                          {% csrf_token %}  <input type="hidden" name="form_name" value="EMERGENCY EQUIPMENT SHIFT TICKET">
+                          <input type="hidden" name="action" value="about">
+                          <button type="submit" class="btn btn-info">About</button>
+                        </form> -->
+                      </div>
+                    </div>
+                    <!-- </a> -->
+                  </div>
+            </div>

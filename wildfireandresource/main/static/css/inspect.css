@@ -1,0 +1,253 @@
+ .form-container {
+    width: 800px;
+    margin: 0 auto;
+    margin-left: 2rem;
+  }
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .form-column {
+    width: 48%; /* Adjust as needed */
+  }
+
+  .form-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-field label {
+    white-space: nowrap; /* Prevent label wrapping */
+  }
+
+  .form-field input {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-left: 10px;
+    height: 29px;
+  }
+
+  .created-at {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-left: 10px;
+    height: 29px;
+    font-size: 13px;
+  }
+  .select-wrapper select {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-left: 10px;
+    height: 29px;
+  }
+  
+  .form-field .dots {
+    flex-grow: 1;
+    border-bottom: 1px dotted #ccc;
+    margin: 0 5px;
+  }
+
+  .submit-button {
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .submit-button button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .submit-button button:hover {
+    background-color: #3e8e41;
+  }
+  .cancel {
+    background-color: gray;
+  }
+
+  .custom-select {
+    width: 200px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: #fff;
+    position: relative;
+}
+
+.dropdown-icon {
+    font-size: 16px;
+    color: #555;
+}
+
+/* New form css */
+.form-group label {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+  font-size: 13px;
+}
+.required {
+  color: red;
+}
+.form-group input {
+    width: 400px;
+    min-width: 400px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 32px;
+    margin-left: 0px;
+}
+.form-single-part input {
+    width: 815px;
+    min-width: 815px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 32px;
+    margin-left: 0px;
+}
+.form-one-part select {
+    width: 400px;
+    min-width: 400px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 32px;
+    margin-left: 0px;
+}
+.form-one-part label {
+  white-space: nowrap; /* Prevent label wrapping */
+  display: block;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+  font-size: 13px;
+}
+.form-three-part input {
+    width: 267px;
+    min-width: 267px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 32px;
+    margin-left: 0px;
+}
+#short-description {
+    width: 267px;
+    min-width: 267px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-left: 0px;
+}
+.form-four-part input {
+    width: 198px;
+    min-width: 198px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 32px;
+    margin-left: 0px;
+}
+.select-wrapper-three select {
+    width: 267px;
+    min-width: 267px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 32px;
+    margin-left: 0px;
+}
+.select-wrapper-three label {
+  white-space: nowrap; /* Prevent label wrapping */
+  display: block;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+  font-size: 13px;
+}
+.select-wrapper-four select {
+  width: 198px;
+    min-width: 198px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 32px;
+    margin-left: 0px;
+}
+.select-wrapper-four label {
+  white-space: nowrap; /* Prevent label wrapping */
+  display: block;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+option {
+  font-size: 12px;
+}
+.add-foreign {
+  font-size: 13px;
+  width: auto;
+  min-width: 130px;
+  max-width: none !important;
+  height: 32px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center; /* Vertically center the icon and text */
+  padding: 5px; /* Add some padding around the content */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  cursor: pointer; /* Optional: Show a pointer cursor on hover */
+                                        
+}
+
+.plus {
+  margin-right: 0.5rem; 
+  font-size: 28px; 
+  color: #ccc;
+  font-weight: 200;
+}
+
+.form-row textarea {
+  width: 820px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.clear-form {
+  cursor: pointer;
+  color: rgb(0, 123, 255);
+  font-size: 14px;
+  margin-right: 590px;
+  display: flex;
+  align-items: center; /* Vertically center the icon and text */
+  gap: 0.5rem; /* Add some horizontal space between icon and text */
+}
+.submit-button button {
+  background-color: #212121;
+}
