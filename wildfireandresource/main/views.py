@@ -29,7 +29,7 @@ from django.db import connection
 
 from .models import Form, UserForm, AnswerField, ResourceOrder, Vendor, Evaluation, Contract, Machine
 from landing_app.views import show_landing
-from form_app.utils import mine_RO,populate_evaluation_form
+from form_app.utils import mine_RO,populate_evaluation_form,validate_pdf
 from form_app.pdf_reader import read_pypdf
 
 @login_required
@@ -402,8 +402,14 @@ def upload_RO(request):
         if request.method == 'POST':
             agreement = request.POST.get('agreement') 
             contract = Contract.objects.filter(id=agreement).values('contract_no','vendor_company').first()
-            resource_file = request.FILES.get('resourceFile')   
+            resource_file = request.FILES.get('resourceFile')
+            validation = validate_pdf(resource_file, "Resource Order")
+            if validation != "Ok":
+               messages.success(request, validation)
+               return redirect("main:resource_order")
+            
             summary = mine_RO(resource_file)
+            
             new_RO = ResourceOrder(
                 agreement_number = contract['contract_no'],
                 company_name = contract['vendor_company'],
@@ -428,7 +434,12 @@ def upload_contract(request):
             description = request.POST.get('description')
             notes = request.POST.get('notes')
             contract_file = request.FILES.get('contractFile')
-            file_name = contract_file.name   
+            file_name = contract_file.name
+            validation = validate_pdf(contract_file, "Agreement #:")
+            if validation != "Ok":
+               messages.success(request, validation)
+               return redirect("main:agreements")
+            
             mined = read_pypdf(contract_file)
             agr = mined['contract']
             vendor = mined['vendor']
@@ -664,13 +675,13 @@ def delete_RO_form(request, form_id):
     if request.method == 'POST':
         try:
             ro_form.delete()
-            messages.success(request, 'Resource Order Form deleted successfully.')
+            #messages.success(request, 'Resource Order Form deleted successfully.')
         except Exception as e:
-            messages.error(request, f"Error deleting form: {e}")
+            #messages.error(request, f"Error deleting form: {e}")
             print(f"Error deleting RO form {form_id}: {e}")
         return redirect('main:upload_RO')
     
-    messages.error(request, 'Invalid request for deletion. Please use the delete button.')
+    #messages.error(request, 'Invalid request for deletion. Please use the delete button.')
     return redirect('main:upload_RO')
 
 @login_required
@@ -680,13 +691,13 @@ def delete_contract(request, form_id):
     if request.method == 'POST':
         try:
             form.delete()
-            messages.success(request, 'Resource Order Form deleted successfully.')
+            #messages.success(request, 'Resource Order Form deleted successfully.')
         except Exception as e:
-            messages.error(request, f"Error deleting form: {e}")
+            #messages.error(request, f"Error deleting form: {e}")
             print(f"Error deleting RO form {form_id}: {e}")
         return redirect('main:agreements')
     
-    messages.error(request, 'Invalid request for deletion. Please use the delete button.')
+    #messages.error(request, 'Invalid request for deletion. Please use the delete button.')
     return redirect('main:agreements')
 
 @login_required
@@ -761,13 +772,13 @@ def delete_Shift_ticket(request, form_id):
     if request.method == 'POST':
         try:
             form.delete()
-            messages.success(request, 'Resource Order Form deleted successfully.')
+            #messages.success(request, 'Resource Order Form deleted successfully.')
         except Exception as e:
-            messages.error(request, f"Error deleting form: {e}")
+            #messages.error(request, f"Error deleting form: {e}")
             print(f"Error deleting RO form {form_id}: {e}")
         return redirect('main:fetch_shift_ticket')
     
-    messages.error(request, 'Invalid request for deletion. Please use the delete button.')
+    #messages.error(request, 'Invalid request for deletion. Please use the delete button.')
     return redirect('main:fetch_shift_ticket')
 
 @login_required
@@ -781,13 +792,13 @@ def delete_Evaluation(request, form_id):
     if request.method == 'POST':
         try:
             form.delete()
-            messages.success(request, 'Resource Order Form deleted successfully.')
+            #messages.success(request, 'Resource Order Form deleted successfully.')
         except Exception as e:
-            messages.error(request, f"Error deleting form: {e}")
+            #messages.error(request, f"Error deleting form: {e}")
             print(f"Error deleting RO form {form_id}: {e}")
         return redirect('main:exhibit_e')
     
-    messages.error(request, 'Invalid request for deletion. Please use the delete button.')
+    #messages.error(request, 'Invalid request for deletion. Please use the delete button.')
     return redirect('main:exhibit_e')
 
 @login_required
@@ -818,7 +829,7 @@ def preview_evaluation(request):
         return response
 
     except Exception as e:
-        messages.error(request, f"An error occurred while generating the PDF: {e}")
+        #messages.error(request, f"An error occurred while generating the PDF: {e}")
         return redirect('your_app_name:evaluation_list') # Redirect on error
 
 # def form_display(request, form_id):

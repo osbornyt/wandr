@@ -4,13 +4,14 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <link rel="shortcut icon" href="{% static 'favicon.ico' %}" />
         <title>{% block title %}WildlandfireResource{% endblock %}</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="{% static 'css/dashboard.css' %}" />
         <link rel="stylesheet" href="{% static 'css/vendor.bundle.base.css' %}" />
         <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-        <link rel="shortcut icon" href="{% static 'favicon.ico' %}" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intro.js@7.2.0/minified/introjs.min.css" integrity="sha256-8blGASrO7QhbrzFwb0rDrMICadeyaaNRQp6VCRNKekA=" crossorigin="anonymous">
          {# Page-specific CSS #}
         {% block custom_css %}{% endblock %}
     </head>
@@ -21,6 +22,9 @@
             {# navbar #}
             {% include 'sections/_navbar.html' %}
             <div class="main-panel">
+                
+
+
                 <div class="content-wrapper pb-0">
                     <div class="row">
                         {% block main_content %}{% endblock %}
@@ -42,7 +46,8 @@
             // footer year
             document.getElementById("year").textContent = new Date().getFullYear();
         </script>
-
+        <script src="https://cdn.jsdelivr.net/npm/intro.js@7.2.0/intro.min.js"></script>
+        <script src="{% static 'js/tutorial.js' %}"></script>
         {# Page-specific JS #}
         {% block custom_js %}{% endblock %}
     </body>

@@ -8,6 +8,7 @@
                 class="navbar-toggler navbar-toggler align-self-center mr-2"
                 type="button"
                 data-toggle="minimize"
+                id="toggle-sidebar"
         >
             <i class="mdi mdi-menu"></i>
         </button>
@@ -106,7 +107,7 @@
 {#                    <p class="p-3 mb-0">View all activities</p>#}
 {#                </div>#}
 {#            </li>#}
-            <li class="nav-item nav-profile dropdown border-0">
+            <li class="nav-item nav-profile dropdown border-0" id="pr-alt-sm">
                 <a
                         class="nav-link dropdown-toggle"
                         id="profileDropdown"
@@ -118,8 +119,7 @@
                             alt=""
                             src="{% static 'images/face.jpg' %}"
                     />
-                    <span class="profile-name"
-                    >{{ first_name|capfirst }} {{ last_name|capfirst }}</span
+                    <span class="profile-name" id="pr-alt">{{ first_name|capfirst }} {{ last_name|capfirst }}</span
                     >
                 </a>
                 <div

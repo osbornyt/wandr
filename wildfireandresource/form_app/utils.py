@@ -1,4 +1,4 @@
-from pypdf import PdfReader, PdfWriter
+from pypdf import PdfReader, PdfWriter 
 from pypdf.generic import NameObject, BooleanObject
 import pdfplumber
 import io
@@ -199,6 +199,34 @@ def populate_evaluation_form(form_data):
     # Return the bytes content of the PDF
     return output_pdf_buffer.getvalue()
 
+
+def validate_pdf(pdf_path, search_text):
+    try:
+        with open(pdf_path, 'rb') as file:
+            reader = PdfReader(file) # Use PdfReader from pypdf
+            
+            # Check if the PDF has any pages
+            if not reader.pages:
+                return "PDF contains no pages."
+
+            # Access the first page (index 0)
+            first_page = reader.pages[0]
+            
+            # Extract text from the first page
+            first_page_text = first_page.extract_text()
+            
+            if first_page_text:
+                # Check if the search_text is present in the extracted text
+                # We use .lower() on both to make the search case-insensitive
+                if search_text.lower() in first_page_text.lower():
+                    return "OK"
+                else:
+                    return "File Mismatch"
+            else:
+                return "No extractable text found"
+
+    except Exception as e:
+        return "Could not read PDF file. It might be corrupted or encrypted"
 
 def mine_RO(file):
     tables = get_form_tables(file)

@@ -520,3 +520,19 @@ p {
     color: var(--text-dark);
 }
 
+/**
+    Tutorials styling.
+ */
+.introjs-tooltip {
+  min-width: 500px;
+  min-height: 100px;
+  padding: 20px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .introjs-tooltip {
+        max-width: 90vw;
+        font-size: 0.9rem;
+    }
+}

@@ -107,7 +107,7 @@
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 @-webkit-keyframes flash {
   0% {
